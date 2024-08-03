@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(48, 7, 85);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(76, 1, 146);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: rgb(144, 98, 98);
+    font-size: 1.1rem;
+}
+
+.left {
+    font-size: 2rem;
+}
+
+.right .btn {
+    padding: 6px;
+    background-color: #161726;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.right .btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.firstSection>div {
+    width: 30%;
+}
+
+.leftSection {
+    font-size: 1.5rem;
+}
+
+.leftSection .btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.leftSection .btn {
+    padding: 5px;
+    background-color: #4955ce;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.leftSection .skills {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.leftSection .icons{
+    width: 5%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.rightSection img {
+    margin: 0px 0px;
+    width: 80%;
+}
+
+.text-purple {
+    color: #f693f6;
+}
+
+.text-gray {
+    color: gray;
+    /* margin: -200px 0px; */
+}
+
+#element {
+    color: #f693f6;;
+}
+
+.secondSection {
+    max-width: 80vw;
+    height: 300px;
+    margin: auto;
+}
+
+.secondSection h1 {
+    font-size: 1.9rem;
+}
+
+.secondSection .horizontal-box {
+    background-color: white;
+    width: 80vw;
+    height: 2px;
+    margin: 55px 0;
+    display: flex;
+}
+
+.secondSection .vertical-box {
+    width: 1px;
+    height: 130px;
+    background-color: white;
+    margin: 0px 104px;
+}
+
+.thirdSection {
+    max-width: 80vw;
+    margin: auto;
+    height: 260px;
+}
+
+.thirdSection h1 {
+    font-size: 1.9rem;
+}
+
+.thirdSection .horizontal-EdBox {
+    background-color: white;
+    width: 80vw;
+    height: 2px;
+    margin: 55px 0;
+    display: flex;
+}
+
+.thirdSection .vertical-EdBox {
+    width: 1px;
+    height: 95px;
+    background-color: white;
+    margin: 1px 175px;
+}
+
+.vertical-title {
+    position: relative;
+    top: -22px;
+    width: 200px;
+    font-size: 16px;
+}
+
+.vertical-EdBox-Title {
+    position: relative;
+    top: -22px;
+    width: 400px;
+    font-size: 16px;
+}
+
+.vertical-desc {
+    position: relative;
+    color: gray;
+    width: 200px;
+    top: -7px;
+    margin: 0px 5px;
+    font-size: 12px;
+}
+
+.vertical-EdBox-Uni {
+    position: relative;
+    color: white;
+    width: 400px;
+    top: -7px;
+    margin: 0px 5px;
+    font-size: 16px;
+}
+
+.Duration {
+    position: relative;
+    width: 140px;
+    top: -16px;
+    margin: 0px 5px;
+    font-size: 10px;
+}
+
+.Duration-EdBox {
+    position: relative;
+    width: 140px;
+    top: -16px;
+    margin: 0px 5px;
+    font-size: 10px;
+}
+
+.footer {
+    display: flex;
+    background-color: #240c3b;
+    height: 280px;
+    margin: 5px 1px;
+    justify-content: space-evenly;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    display: none;
+}
+
+.footerfirst h1 {
+    font-size: 1.9rem;
+}
+
+.badge-base LI-profile-badge {
+    margin: auto;
+}
+
+footer .footer-rights {
+    background-color: #240c3b;
+    text-align: center;
+    color: gray;
+    padding: 12px;
+}
+
+ /* main hr {
+    border: 0;
+    background: rgb(144, 98, 98);
+    height: 1.2px;
+    margin: 30px 84px;
+} */
+
+.Wipro-logo {
+    width: 70px;
+    background-color: white;
+    position: relative;
+    top: 138px;
+    left: -190px;
+}
+
+.Java-logo {
+    width: 50px;
+    position: relative;
+}
+
+.Python-logo{
+    width: 50px;
+    position: relative;
+}
+
+.PowerShell-logo {
+    width: 65px;
+    position: relative;
+}
