@@ -1,9 +1,34 @@
-# Apps for HTML,CSS, and JS
-All about back to being basic,
-A list of Basic Apps/Ideas/Snippets you can create for building skills and knowledge.
+# HTML-CSS-JS Projects Workspace
 
-## Index
-- [1. Ask them out for tea](https://github.com/Shishir420-GIT/Apps-For-HTML-CSS-JS/tree/main/Asking-For-Tea-App)
-- [2. A BubbleSmashing Game](https://github.com/Shishir420-GIT/Apps-For-HTML-CSS-JS/tree/main/BubbleGame)
-- [3. JavaScript Snippets](https://github.com/Shishir420-GIT/Apps-For-HTML-CSS-JS/tree/main/JavaScript-Snippets)
-- [4. HTML WebPages](https://github.com/Shishir420-GIT/Apps-For-HTML-CSS-JS/tree/main/WebPages)
+This workspace contains a collection of web development projects, demos, and experiments using HTML, CSS, JavaScript, and related technologies. Each project is organized in its own folder for clarity and maintainability.
+
+## Structure
+
+```
+projects/
+  askout/           # Fun interactive 'Chai pe chalein?' app
+  bubble-game/      # NumberSmash game - click the numbers!
+  color-rectangle/  # Color rectangle/animation demo
+  funny-intro/      # Funny intro web page
+  hello-world/      # Java/HTML Hello World app (with backend)
+  image-pop/        # Minimal image pop demo
+  portfolio/        # Main portfolio website
+  portfolio-demo/   # Demo/alternate portfolio site
+  shishir-first/    # First web project
+  archive/          # Old/unused/legacy projects
+```
+
+## How to Use
+
+- Each project folder contains its own `index.html` (and related files).
+- Open the `index.html` file in your browser to view/run the project.
+- Some projects may have additional documentation or dependencies (see their README files if present).
+
+## Notes
+
+- The `archive/` folder contains old or experimental projects for reference.
+- This workspace is intended for learning, experimentation, and portfolio purposes.
+
+---
+
+Feel free to explore, modify, and use these projects as you like! 
