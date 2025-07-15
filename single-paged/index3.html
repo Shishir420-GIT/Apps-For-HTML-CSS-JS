@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shishir Srivastav - AI/ML Engineer & Tech Content Creator</title>
+    <meta name="description" content="Senior Python Developer with almost 5 years of experience, I simplify complex tasks and believe that 'if it is structured, it can be automated'. My keen interest in Generative AI and its capabilities has allowed me to build and even win prizes by building and presenting Generative AI-based applications in various places.">
+    <meta name="keywords" content="Python, AI, ML, Multi Cloud - AWS • GCP • Azure • OCI, Expertise in Generative AI, Automation, Scripting, DevOps, Designing, Troubleshooting, software engineer">
+    <meta name="author" content="Shishir Srivastav">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://Shishir420-GIT.github.io">
+    <meta property="og:title" content="Shishir Srivastav - AI/ML Engineer & Tech Content Creator">
+    <meta property="og:description" content="Senior Python Developer with almost 5 years of experience, I simplify complex tasks and believe that 'if it is structured, it can be automated'.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/Shishir420-GIT">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://Shishir420-GIT.github.io">
+    <meta property="twitter:title" content="Shishir Srivastav - AI/ML Engineer & Tech Content Creator">
+    <meta property="twitter:description" content="Senior Python Developer with almost 5 years of experience, I simplify complex tasks and believe that 'if it is structured, it can be automated'.">
+    <meta property="twitter:image" content="https://avatars.githubusercontent.com/Shishir420-GIT">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #06b6d4;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --text-light: #9ca3af;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-card: #ffffff;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        [data-theme="dark"] {
+            --text-primary: #f9fafb;
+            --text-secondary: #d1d5db;
+            --text-light: #9ca3af;
+            --bg-primary: #111827;
+            --bg-secondary: #1f2937;
+            --bg-card: #1f2937;
+            --border-color: #374151;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(99, 102, 241, 0.8);
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+            mix-blend-mode: difference;
+        }
+
+        .cursor-follower {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid rgba(99, 102, 241, 0.3);
+            pointer-events: none;
+            z-index: 9998;
+            transition: all 0.3s ease;
+        }
+
+        /* Color Splash Effect */
+        .color-splash {
+            position: fixed;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1000;
+            animation: splash 1s ease-out forwards;
+        }
+
+        @keyframes splash {
+            0% {
+                transform: scale(0);
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: scale(3);
+                opacity: 0;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] .navbar {
+            background: rgba(17, 24, 39, 0.95);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            box-shadow: var(--shadow-xl);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1rem;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            animation: slideInUp 1s ease-out 0.2s both;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            animation: slideInUp 1s ease-out 0.4s both;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideInUp 1s ease-out 0.6s both;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            animation: slideInUp 1s ease-out 0.8s both;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        /* Achievements Section */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .achievement-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .achievement-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-icon {
+            font-size: 2rem;
+        }
+
+        .achievement-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .achievement-stat {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .achievement-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .achievement-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .project-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-description ul {
+            margin-left: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            position: relative;
+            margin-top: 3rem;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            transform: translateX(-50%);
+        }
+
+        .experience-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .experience-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .experience-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .experience-content {
+            flex: 1;
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            margin: 0 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .experience-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .experience-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .company-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            background: var(--bg-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .experience-details h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-details .role {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-details .date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .experience-responsibilities {
+            margin-top: 1.5rem;
+        }
+
+        .experience-responsibilities ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .experience-responsibilities li {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .experience-responsibilities li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 2rem;
+            width: 16px;
+            height: 16px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            border: 4px solid var(--bg-primary);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-category {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .skill-category h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-item {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .skill-link {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-secondary);
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-tagline {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-built-with {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .achievements-grid,
+            .projects-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-timeline::before {
+                left: 2rem;
+            }
+
+            .experience-item {
+                flex-direction: column !important;
+            }
+
+            .experience-content {
+                margin: 0 0 0 4rem;
+            }
+
+            .timeline-dot {
+                left: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 1rem;
+            }
+
+            .hero-content {
+                padding: 0 1rem;
+            }
+
+            .section {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .achievement-card,
+            .project-card,
+            .skill-category,
+            .experience-content {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--border-color);
+            border-top: 3px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">Shishir Srivastav</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <img src="https://avatars.githubusercontent.com/Shishir420-GIT" alt="Shishir Srivastav" class="hero-avatar">
+            <h1>Shishir Srivastav</h1>
+            <p class="tagline">Senior AI/ML Engineer & Tech Content Creator</p>
+            <p class="description">
+                👋 Welcome! I'm Senior Developer with almost 5 years of experience, I simplify complex tasks and believe that 'if it is structured, it can be automated'. My keen interest in Generative AI and its capabilities has allowed me to build and even win prizes by building and presenting Generative AI-based applications in various places. So let me ask you, what are we going to build next?
+            </p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-code"></i>
+                    View My Work
+                </a>
+                <a href="#about" class="btn btn-secondary">
+                    <i class="fas fa-user"></i>
+                    Learn More
+                </a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Shishir420-GIT" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=shishir-srivastav" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://x.com/shishir_who" class="social-link" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/programmatic.ly" class="social-link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCCZiCzPtg9pmDwChJ4ROIpA?sub_confirmation=1" class="social-link" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://shishirsrivastav.hashnode.dev" class="social-link" target="_blank">
+                    <i class="fas fa-blog"></i>
+                </a>
+                <a href="https://linktr.ee/shishirsrivastav" class="social-link" target="_blank">
+                    <i class="fas fa-link"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section fade-in" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p class="about-text">
+                👋 Welcome! I'm Senior Developer with almost 5 years of experience, I simplify complex tasks and believe that 'if it is structured, it can be automated'. My keen interest in Generative AI and its capabilities has allowed me to build and even win prizes by building and presenting Generative AI-based applications in various places. So let me ask you, what are we going to build next?
+            </p>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section fade-in" id="achievements">
+        <h2 class="section-title">Key Highlights</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <div class="achievement-header">
+                    <div class="achievement-icon">📹</div>
+                    <div class="achievement-title">YouTube Channel</div>
+                </div>
+                <div class="achievement-stat">Some Subscribers</div>
+                <p class="achievement-description">
+                    Created a YouTube channel for sharing tutorials and insights on AI/ML, cloud technologies, and software development best practices.
+                </p>
+                <a href="https://www.youtube.com/channel/UCCZiCzPtg9pmDwChJ4ROIpA?sub_confirmation=1" class="achievement-link" target="_blank">
+                    Watch Videos <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-header">
+                    <div class="achievement-icon">🌐</div>
+                    <div class="achievement-title">Professional Network</div>
+                </div>
+                <div class="achievement-stat">5K+</div>
+                <p class="achievement-description">
+                    Built a strong professional network of 5,000+ connections, actively sharing knowledge and insights about AI/ML, cloud technologies, and career development.
+                </p>
+                <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=shishir-srivastav" class="achievement-link" target="_blank">
+                    Connect on LinkedIn <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-header">
+                    <div class="achievement-icon">🏆</div>
+                    <div class="achievement-title">Top 1% Mentor</div>
+                </div>
+                <div class="achievement-stat">Top 1%</div>
+                <p class="achievement-description">
+                    Ranked in the top 1% of mentors on Topmate, helping developers and professionals grow in their AI/ML careers with personalized guidance and industry insights.
+                </p>
+                <a href="https://topmate.io/shishir_srivastav" class="achievement-link" target="_blank">
+                    View Profile <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-header">
+                    <div class="achievement-icon">📸</div>
+                    <div class="achievement-title">Instagram Community</div>
+                </div>
+                <div class="achievement-stat">Some Followers</div>
+                <p class="achievement-description">
+                    Building an engaged community on Instagram, sharing insights on AI/ML, cloud technologies, and personal development.
+                </p>
+                <a href="https://www.instagram.com/programmatic.ly" class="achievement-link" target="_blank">
+                    Connect on Instagram <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-header">
+                    <div class="achievement-icon">📝</div>
+                    <div class="achievement-title">Hashnode Community</div>
+                </div>
+                <div class="achievement-stat">Some Followers</div>
+                <p class="achievement-description">
+                    Growing a community on Hashnode, sharing articles and tutorials on AI/ML, cloud technologies, and software development.
+                </p>
+                <a href="https://shishirsrivastav.hashnode.dev" class="achievement-link" target="_blank">
+                    Read Articles <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-header">
+                    <div class="achievement-icon">🎓</div>
+                    <div class="achievement-title">Industry Certifications</div>
+                </div>
+                <div class="achievement-stat">10+</div>
+                <p class="achievement-description">
+                    Earned 10+ professional certifications from AWS, Oracle, Microsoft, and other leading technology companies, demonstrating expertise across multiple cloud platforms.
+                </p>
+                <a href="https://www.credly.com/users/shishir-srivastav-who" class="achievement-link" target="_blank">
+                    View Certifications <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section fade-in" id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">Gemini Based- Streamlined Mobile Devices Research</h3>
+                        <span class="project-date">Dec 2024</span>
+                    </div>
+                    <div class="project-description">
+                        <p>This application uses Streamlit to compare YouTube videos by fetching transcripts, summarizing content, and generating comparison tables. It leverages Google's Gemini AI for content generation.</p>
+                        <p><strong>Features:</strong></p>
+                        <ul>
+                            <li>Extract transcripts from YouTube videos</li>
+                            <li>Summarize video content using Gemini AI</li>
+                            <li>Generate comparison tables in HTML, CSV, and PDF formats</li>
+                            <li>Download comparison results</li>
+                        </ul>
+                    </div>
+                    <a href="https://github.com/Shishir420-GIT/BnB-Hack-A-Thon" class="project-link" target="_blank">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">Automation Generator Tool</h3>
+                        <span class="project-date">July 2024</span>
+                    </div>
+                    <div class="project-description">
+                        <p>This application allows users to upload an SOP based pdf, which lets them create an Automation around it, by providing a block diagram (text based), a script and list of pre-requisites to run the script. The AI being utilized here is Gemini-pro.</p>
+                        <p><strong>Features:</strong></p>
+                        <ul>
+                            <li>Queries MongoDB for existing solutions</li>
+                            <li>Upload SOP based PDF & Summarising of the PDF</li>
+                            <li>AI-powered script, flow and pre-requisite generation</li>
+                            <li>Option to regenerate review code and regenerate it</li>
+                        </ul>
+                    </div>
+                    <a href="https://github.com/Shishir420-GIT/Automation-Generator" class="project-link" target="_blank">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section fade-in" id="experience">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="experience-timeline">
+            <div class="experience-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-content">
+                    <div class="experience-header">
+                        <div class="company-logo">EY</div>
+                        <div class="experience-details">
+                            <h3>EY GDS</h3>
+                            <div class="role">Senior Technology Consultant II</div>
+                            <div class="date">December 2024 - Present</div>
+                        </div>
+                    </div>
+                    <div class="experience-responsibilities">
+                        <ul>
+                            <li>Developed a Cyber AI Package to detect PII, prompt injection, and jailbreak attempts using a combination of Microsoft Presidio, custom ML models with 97% accuracy, and pattern-based logic.</li>
+                            <li>Designed solution architecture for a Policy Assessment Engine that utilizes OpenAI APIs to evaluate compliance narratives and automate risk scoring planned to reduce human effort by 50%.</li>
+                            <li>Built an Agentic AI system to analyse ZScaler activity logs and generate real-time alerts based on user behaviour, enhancing cloud security posture monitoring.</li>
+                            <li>Automated scripts for 20,000+ devices, utilizing CrowdStrike API and a combination of Python, AWS Lambda, EventBridge, and task schedulers.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-content">
+                    <div class="experience-header">
+                        <div class="company-logo">WIP</div>
+                        <div class="experience-details">
+                            <h3>Wipro Technologies</h3>
+                            <div class="role">Senior Python Developer</div>
+                            <div class="date">September 2020 - December 2024</div>
+                        </div>
+                    </div>
+                    <div class="experience-responsibilities">
+                        <ul>
+                            <li>Built RAG-based KB article retrieval for multiple customers with Gemini and Claude 3 using Vertex AI and Amazon Bedrock respectively, utilized Spanner and MongoDB for storing Vector embeddings bringing down time of resolution by 30-40%.</li>
+                            <li>Developed multiple Python solutions to fetch EC2 instances data using Lambda functions and fetch WAF reports data from S3 buckets with boto3, worked with Lambda, ECR, ECS, RDS, DynamoDB, Cloud Formation (CDK), AWS CLI etc.</li>
+                            <li>Implemented multiple generative AI (Gen AI) based solutions, such as Chat Interface using Lang Chain, added query analysis for improving search quality for phrasing to LLMs while maintaining chat history and meeting notes summary generator.</li>
+                            <li>Ensured consistent results using Python, Terraform and PowerShell by implementing across multiple clouds such as AWS and Azure for managing servers, creating infrastructures and deploying solutions, reducing deployment time by in range of 40-50%.</li>
+                            <li>As a senior developer provided feedback, mentored and guided colleagues and new joiners for smooth transition in projects, and authored white papers and SOPs for simplifying the DevOps process.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section fade-in" id="skills">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Front-End</h3>
+                <div class="skill-items">
+                    <span class="skill-item">HTML5</span>
+                    <span class="skill-item">CSS3</span>
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">TypeScript</span>
+                    <span class="skill-item">React.js</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Back-End</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Node.js</span>
+                    <span class="skill-item">Express.js</span>
+                    <span class="skill-item">MongoDB</span>
+                    <span class="skill-item">Firebase</span>
+                    <span class="skill-item">MySQL</span>
+                    <span class="skill-item">PHP</span>
+                    <span class="skill-item">REST API</span>
+                    <span class="skill-item">GraphQL</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Programming</h3>
+                <div class="skill-items">
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">TypeScript</span>
+                    <span class="skill-item">Python</span>
+                    <span class="skill-item">C++</span>
+                    <span class="skill-item">Java</span>
+                    <span class="skill-item">R</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Tech & Tools</h3>
+                <div class="skill-items">
+                    <span class="skill-item">NPM</span>
+                    <span class="skill-item">Bun</span>
+                    <span class="skill-item">Git</span>
+                    <span class="skill-item">GitHub</span>
+                    <span class="skill-item">Vite.js</span>
+                    <span class="skill-item">Socket.io</span>
+                    <span class="skill-item">Netlify</span>
+                    <span class="skill-item">Vercel</span>
+                    <span class="skill-item">VS Code</span>
+                    <span class="skill-item">Figma</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Certifications & Learning</h3>
+                <div class="skill-items">
+                    <a href="https://www.credly.com/users/shishir-srivastav-who" class="skill-link" target="_blank">
+                        <span class="skill-item">View My Credly Profile</span>
+                    </a>
+                    <a href="https://www.credly.com/badges/b8badd21-2d0c-45c6-9c31-fb2a713595dc/public_url" class="skill-link" target="_blank">
+                        <span class="skill-item">AWS Certified Cloud Practitioner</span>
+                    </a>
+                    <a href="https://www.credly.com/badges/3c883589-ee1e-432c-b405-b6141ff17bf4/public_url" class="skill-link" target="_blank">
+                        <span class="skill-item">AWS Certified AI Practitioner</span>
+                    </a>
+                    <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=34452D7DA32B6ACE94DD86836D9FFC7F3D28249CB2F900663E1A9BCD7D25CB2C" class="skill-link" target="_blank">
+                        <span class="skill-item">Oracle Cloud AI Foundations</span>
+                    </a>
+                    <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=B7157985339B6F1CBF966978C8573A2C69C396819ED482926EF2CA6F98E62872" class="skill-link" target="_blank">
+                        <span class="skill-item">Oracle Cloud Generative AI Professional</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-tagline">Let's connect and build something amazing together! 🚀</p>
+            <div class="footer-social">
+                <a href="https://github.com/Shishir420-GIT" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=shishir-srivastav" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://x.com/shishir_who" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/programmatic.ly" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCCZiCzPtg9pmDwChJ4ROIpA?sub_confirmation=1" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://shishirsrivastav.hashnode.dev" target="_blank">
+                    <i class="fas fa-blog"></i>
+                </a>
+                <a href="https://linktr.ee/shishirsrivastav" target="_blank">
+                    <i class="fas fa-link"></i>
+                </a>
+            </div>
+            <p class="footer-built-with">Built with ❤️ using vanilla JavaScript • Open Source</p>
+        </div>
+    </footer>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', () => {
+            const loading = document.getElementById('loading');
+            setTimeout(() => {
+                loading.classList.add('hidden');
+            }, 1000);
+        });
+
+        // Custom cursor
+        const cursor = document.getElementById('cursor');
+        const cursorFollower = document.getElementById('cursor-follower');
+        let mouseX = 0, mouseY = 0;
+        let followerX = 0, followerY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            cursor.style.left = mouseX - 10 + 'px';
+            cursor.style.top = mouseY - 10 + 'px';
+            
+            // Color splash effect
+            createColorSplash(mouseX, mouseY);
+        });
+
+        function animateFollower() {
+            followerX += (mouseX - followerX) * 0.1;
+            followerY += (mouseY - followerY) * 0.1;
+            
+            cursorFollower.style.left = followerX - 20 + 'px';
+            cursorFollower.style.top = followerY - 20 + 'px';
+            
+            requestAnimationFrame(animateFollower);
+        }
+        animateFollower();
+
+        // Color splash effect
+        const colors = ['#6366f1', '#8b5cf6', '#06b6d4', '#10b981', '#f59e0b', '#ef4444', '#ec4899'];
+        let lastSplashTime = 0;
+
+        function createColorSplash(x, y) {
+            const now = Date.now();
+            if (now - lastSplashTime < 100) return; // Throttle splash creation
+            lastSplashTime = now;
+
+            const splash = document.createElement('div');
+            splash.className = 'color-splash';
+            splash.style.left = x - 15 + 'px';
+            splash.style.top = y - 15 + 'px';
+            splash.style.width = '30px';
+            splash.style.height = '30px';
+            splash.style.background = colors[Math.floor(Math.random() * colors.length)];
+            
+            document.body.appendChild(splash);
+            
+            setTimeout(() => {
+                splash.remove();
+            }, 1000);
+        }
+
+        // Hover effects for interactive elements
+        const interactiveElements = document.querySelectorAll('a, button, .achievement-card, .project-card, .skill-category, .experience-content');
+        
+        interactiveElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(1.5)';
+                cursorFollower.style.transform = 'scale(1.2)';
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursorFollower.style.transform = 'scale(1)';
+            });
+        });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            const icon = themeToggle.querySelector('i');
+            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        });
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        body.setAttribute('data-theme', savedTheme);
+        const icon = themeToggle.querySelector('i');
+        icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.style.background = savedTheme === 'dark' 
+                    ? 'rgba(17, 24, 39, 0.98)' 
+                    : 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 4px 6px -1px rgb(0 0 0 / 0.1)';
+            } else {
+                navbar.style.background = savedTheme === 'dark' 
+                    ? 'rgba(17, 24, 39, 0.95)' 
+                    : 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '100%';
+            navLinks.style.left = '0';
+            navLinks.style.right = '0';
+            navLinks.style.background = 'var(--bg-card)';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.padding = '1rem';
+            navLinks.style.boxShadow = 'var(--shadow-lg)';
+            navLinks.style.borderRadius = '0 0 10px 10px';
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-container')) {
+                navLinks.style.display = 'none';
+            }
+        });
+
+        // Typing effect for hero title
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effect after page load
+        setTimeout(() => {
+            const heroTitle = document.querySelector('.hero h1');
+            if (heroTitle) {
+                typeWriter(heroTitle, 'Shishir Srivastav', 150);
+            }
+        }, 1500);
+
+        // Add floating animation to cards on scroll
+        const cards = document.querySelectorAll('.achievement-card, .project-card, .skill-category');
+        
+        window.addEventListener('scroll', () => {
+            cards.forEach((card, index) => {
+                const rect = card.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                
+                if (isVisible) {
+                    const scrollProgress = (window.innerHeight - rect.top) / window.innerHeight;
+                    const translateY = Math.sin(scrollProgress * Math.PI) * 10;
+                    card.style.transform = `translateY(${translateY}px)`;
+                }
+            });
+        });
+
+        // Add particle effect to hero section
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.style.position = 'absolute';
+            particle.style.width = '4px';
+            particle.style.height = '4px';
+            particle.style.background = 'rgba(255, 255, 255, 0.5)';
+            particle.style.borderRadius = '50%';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = '100%';
+            particle.style.pointerEvents = 'none';
+            particle.style.animation = 'float-up 8s linear infinite';
+            
+            document.querySelector('.hero').appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 8000);
+        }
+
+        // Add CSS for particle animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float-up {
+                to {
+                    transform: translateY(-100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Create particles periodically
+        setInterval(createParticle, 500);
+
+        // Add glitch effect to logo on hover
+        const logo = document.querySelector('.logo');
+        logo.addEventListener('mouseenter', () => {
+            logo.style.animation = 'glitch 0.3s ease-in-out';
+        });
+
+        logo.addEventListener('animationend', () => {
+            logo.style.animation = '';
+        });
+
+        // Add glitch animation CSS
+        const glitchStyle = document.createElement('style');
+        glitchStyle.textContent = `
+            @keyframes glitch {
+                0%, 100% { transform: translate(0); }
+                20% { transform: translate(-2px, 2px); }
+                40% { transform: translate(-2px, -2px); }
+                60% { transform: translate(2px, 2px); }
+                80% { transform: translate(2px, -2px); }
+            }
+        `;
+        document.head.appendChild(glitchStyle);
+
+        // Add progress bar for page scroll
+        const progressBar = document.createElement('div');
+        progressBar.style.position = 'fixed';
+        progressBar.style.top = '0';
+        progressBar.style.left = '0';
+        progressBar.style.width = '0%';
+        progressBar.style.height = '3px';
+        progressBar.style.background = 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))';
+        progressBar.style.zIndex = '10001';
+        progressBar.style.transition = 'width 0.1s ease';
+        document.body.appendChild(progressBar);
+
+        window.addEventListener('scroll', () => {
+            const scrollProgress = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            progressBar.style.width = scrollProgress + '%';
+        });
+
+        // Add easter egg - Konami code
+        let konamiCode = [];
+        const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // Up Up Down Down Left Right Left Right B A
+
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.keyCode);
+            if (konamiCode.length > konamiSequence.length) {
+                konamiCode.shift();
+            }
+            
+            if (konamiCode.join(',') === konamiSequence.join(',')) {
+                // Easter egg activated!
+                document.body.style.animation = 'rainbow 2s infinite';
+                setTimeout(() => {
+                    document.body.style.animation = '';
+                }, 5000);
+            }
+        });
+
+        // Add rainbow animation CSS
+        const rainbowStyle = document.createElement('style');
+        rainbowStyle.textContent = `
+            @keyframes rainbow {
+                0% { filter: hue-rotate(0deg); }
+                100% { filter: hue-rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(rainbowStyle);
+
+        // Add click ripple effect
+        document.addEventListener('click', (e) => {
+            const ripple = document.createElement('div');
+            ripple.style.position = 'fixed';
+            ripple.style.left = e.clientX - 25 + 'px';
+            ripple.style.top = e.clientY - 25 + 'px';
+            ripple.style.width = '50px';
+            ripple.style.height = '50px';
+            ripple.style.borderRadius = '50%';
+            ripple.style.background = 'rgba(99, 102, 241, 0.3)';
+            ripple.style.pointerEvents = 'none';
+            ripple.style.zIndex = '9999';
+            ripple.style.animation = 'ripple 0.6s ease-out';
+            
+            document.body.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+
+        // Add ripple animation CSS
+        const rippleStyle = document.createElement('style');
+        rippleStyle.textContent = `
+            @keyframes ripple {
+                0% {
+                    transform: scale(0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(rippleStyle);
+
+        // Performance optimization - throttle scroll events
+        let ticking = false;
+        
+        function updateOnScroll() {
+            // All scroll-related updates here
+            ticking = false;
+        }
+        
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateOnScroll);
+                ticking = true;
+            }
+        }
+        
+        window.addEventListener('scroll', requestTick);
+
+        // Add smooth reveal animation for timeline items
+        const timelineItems = document.querySelectorAll('.experience-item');
+        
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 200);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        timelineItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(50px)';
+            item.style.transition = 'all 0.6s ease';
+            timelineObserver.observe(item);
+        });
+
+        // Add skill item hover effects
+        document.querySelectorAll('.skill-item').forEach(skill => {
+            skill.addEventListener('mouseenter', () => {
+                skill.style.transform = 'translateY(-3px) scale(1.05)';
+                skill.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            });
+            
+            skill.addEventListener('mouseleave', () => {
+                skill.style.transform = 'translateY(0) scale(1)';
+                skill.style.boxShadow = 'none';
+            });
+        });
+
+        console.log('🚀 Portfolio loaded successfully!');
+        console.log('💡 Try the Konami code for a surprise!');
+        console.log('🎨 Enjoy the color splash cursor effect!');
+    </script>
+</body>
+</html>

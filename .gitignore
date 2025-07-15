@@ -7,6 +7,6 @@
 *.env
 
 # Uncomment below if you use build tools and want to ignore build output
-dist/
-build/
+# dist/
+# build/
 
